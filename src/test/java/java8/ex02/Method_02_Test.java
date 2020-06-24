@@ -50,13 +50,9 @@ public class Method_02_Test {
         
         @Override
         public String format() {
-        	int sum = 0;
-        	for (Person p : findAll())
-        	{
-        		sum += 1;
-        	}
+
         	
-        	return "DaoA" + "[" + sum + " persons]";
+        	return "DaoA" + IDao.super.format();
         
         }
         
