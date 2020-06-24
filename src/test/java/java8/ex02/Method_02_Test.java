@@ -22,9 +22,9 @@ public class Method_02_Test {
         
         default String format() {
         	int sum = 0;
-        	for (Person p: findAll())
+        	for (Person p : findAll())
         	{
-        		sum += p.getAge();
+        		sum += 1;
         	}
         	
         	return "[" + sum + " persons]";
@@ -48,14 +48,16 @@ public class Method_02_Test {
         // TODO exemple de résultat : "DaoA[14 persons]", "DaoA[30 persons]"
         // TODO l'implémentation réutilise la méthode format() de l'interface
         
+        @Override
         public String format() {
         	int sum = 0;
-        	for (Person p: this.people)
+        	for (Person p : findAll())
         	{
-        		sum += p.getAge();
+        		sum += 1;
         	}
         	
-        	return "[" + sum + " persons]";
+        	return "DaoA" + "[" + sum + " persons]";
+        
         }
         
 
@@ -72,6 +74,6 @@ public class Method_02_Test {
         
         result = daoA.format();
 
-        "DaoA[20 persons]".equals(result);
+        assert "DaoA[20 persons]".equals(result);
     }
 }
