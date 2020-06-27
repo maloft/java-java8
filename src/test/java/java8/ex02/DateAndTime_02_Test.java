@@ -22,14 +22,14 @@ public class DateAndTime_02_Test {
     public void test_localDate_of() {
 
         // TODO créer un objet LocalDate à la date 24/12/2050
-        LocalDate result = null;
+        LocalDate result = LocalDate.parse("2050-12-24");
 
         // TODO valoriser les différentes variables afin de rendre le test passant
-        int year = 2050;
-        Month month = Month.DECEMBER;
-        int dayOfMonth = 24;
-        DayOfWeek dayOfWeek = DayOfWeek.SATURDAY;
-        int dayOfYear = 358;
+        int year = result.getYear();
+        Month month = result.getMonth();
+        int dayOfMonth = result.getDayOfMonth();
+        DayOfWeek dayOfWeek = result.getDayOfWeek();
+        int dayOfYear = result.getDayOfYear();
 
         assertThat(year, is(2050));
         assertThat(month, is(Month.DECEMBER));
@@ -47,9 +47,9 @@ public class DateAndTime_02_Test {
 
 
         // TODO valoriser les différentes variables afin de rendre le test passant
-        int year = 1990;
-        Month month = Month.JANUARY;
-        int dayOfMonth = 10;
+        int year = result.getYear();
+        Month month = result.getMonth();
+        int dayOfMonth = result.getDayOfMonth();
 
 
         assertThat(year, is(1990));
